@@ -1,0 +1,1 @@
+sudo docker run -p 8080:80 -v ~/workspace/exp/docker/phpExperiment/src/:/var/www/html/ -t hello-world
