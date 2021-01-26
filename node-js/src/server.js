@@ -1,7 +1,3 @@
-// sudo docker build -t node-server .
-// sudo docker run -d --name nodeJS -p 8080:80 -v ~/workspace/docker/node-js/src/:/server/ -t node-server
-// sudo docker stop nodeJS
-
 var http = require('http');
 var formidable = require('formidable');
 var fs = require('fs');
@@ -50,6 +46,7 @@ http.createServer(function (req, res) {
  });
   } else {
     res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write('[NODE-JS] Hello World!<br>')
     res.write('<form action="fileupload" method="post" enctype="multipart/form-data">');
     res.write('<input type="file" name="filetoupload"><br>');
     res.write('<input type="submit">');

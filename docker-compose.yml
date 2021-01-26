@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  node-js:
+    build: ./node-js
+    volumes:
+      - ./node-js/src:/server
+    ports:
+      - 8080:80
+
+  php:
+    build: ./php-apache
+    volumes:
+      - ./php-apache/src:/var/www/html
+    ports:
+      - 8081:80
+
+  python:
+    build: ./python
+    volumes:
+      - ./python/src:/server
+    ports:
+      - 8082:80
