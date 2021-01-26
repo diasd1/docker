@@ -1,3 +1,6 @@
+// sudo docker build -t node-server .
+// sudo docker run -p 8080:80 -v ~/workspace/docker/node-js/src/:/server/ -t node-server
+
 var http = require('http');
 var formidable = require('formidable');
 var fs = require('fs');
