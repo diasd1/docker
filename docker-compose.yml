@@ -21,3 +21,6 @@ services:
       - ./python/src:/server
     ports:
       - 8082:80
+    depends_on:
+      - php
+      - node-js

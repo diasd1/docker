@@ -1,1 +1,27 @@
 [PYTHON] Hello World!
+
+<title>Python Docker</title>
+
+<select id="sites">
+    <option value="php">PHP</option>
+    <option value="node-js">Node-JS</option>
+</select>
+
+<button onclick="test()">Load!</button>
+
+
+<script>
+    function test()
+    {
+        console.log(document.getElementById("sites").value)
+
+        fetch("http://" + window.location.host + "/load/" + document.getElementById("sites").value)
+            .then(function(response)
+            {
+                response.text().then(function (text)
+                {
+                    document.write(text)
+                })
+            })
+    }
+</script>
